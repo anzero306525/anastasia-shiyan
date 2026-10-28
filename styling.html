@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Стилизация съёмок — Анастасия Шиян</title>
+  <meta name="description" content="Стилизация фото- и видеосъёмок от стилиста Анастасии Шиян: от концепции и подбора образов до контроля деталей в кадре.">
+  <meta name="theme-color" content="#FAF8F5">
+
+  <!-- Иконка вкладки: тёмный круг с белой звёздочкой -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232B2B2B'/%3E%3Cpath d='M32 14C33.6 26 38 30.4 50 32C38 33.6 33.6 38 32 50C30.4 38 26 33.6 14 32C26 30.4 30.4 26 32 14Z' fill='%23FFFFFF'/%3E%3C/svg%3E">
+
+  <!-- Карточка ссылки при отправке в Telegram, WhatsApp и соцсети -->
+  <!-- Когда сайт будет на хостинге, в og:image лучше указать полный адрес: https://ваш-сайт/images/hero.jpg -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Стилизация съёмок — Анастасия Шиян">
+  <meta property="og:description" content="Стилизация фото- и видеосъёмок от стилиста Анастасии Шиян: от концепции и подбора образов до контроля деталей в кадре.">
+  <meta property="og:image" content="images/hero.jpg">
+
+  <!-- Шрифты Google Fonts: Montserrat и Cormorant Garamond (обычный и курсив) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Наши стили -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Наш скрипт: defer — выполнится после загрузки HTML и не тормозит отрисовку -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Фон сайта: мягкие размытые пятна позади всего контента -->
+  <div class="page-bg" aria-hidden="true">
+    <span class="page-bg__blob page-bg__blob--1"></span>
+    <span class="page-bg__blob page-bg__blob--2"></span>
+    <span class="page-bg__blob page-bg__blob--3"></span>
+  </div>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header">
+    <div class="header__inner">
+      <!-- Левые ссылки -->
+      <nav class="header__nav header__nav--left">
+        <a href="index.html#services" class="header__link">Услуги</a>
+        <a href="index.html#about" class="header__link">Обо мне</a>
+      </nav>
+
+      <!-- Логотип по центру -->
+      <a href="index.html" class="logo">stylist</a>
+
+      <!-- Правые ссылки -->
+      <nav class="header__nav header__nav--right">
+        <a href="index.html#portfolio" class="header__link">Портфолио</a>
+        <a href="https://t.me/roksi012" class="header__link" target="_blank" rel="noopener">Связаться</a>
+      </nav>
+
+      <!-- Кнопка-бургер (видна только на телефоне) -->
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Мобильное меню на весь экран -->
+  <nav class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__links">
+      <a href="index.html#services" class="mobile-menu__link">Услуги</a>
+      <a href="index.html#about" class="mobile-menu__link">Обо мне</a>
+      <a href="index.html#portfolio" class="mobile-menu__link">Портфолио</a>
+      <a href="https://t.me/roksi012" class="mobile-menu__link" target="_blank" rel="noopener">Связаться</a>
+    </div>
+
+    <!-- Контакты внизу меню -->
+    <div class="mobile-menu__contacts">
+      <a href="https://t.me/roksi012" target="_blank" rel="noopener">@roksi012</a>
+      <a href="mailto:Nasikkroko@mail.ru">Nasikkroko@mail.ru</a>
+    </div>
+  </nav>
+
+  <!-- ===== ОСНОВНОЕ СОДЕРЖИМОЕ ===== -->
+  <main class="service-page">
+    <div class="container">
+
+      <!-- Ссылка назад -->
+      <a href="index.html#services" class="back-link">← Назад к услугам</a>
+
+      <!-- Фото и описание услуги -->
+      <section class="service">
+        <img src="images/styling.jpg" alt="Стилизация съёмок" class="service__photo reveal" decoding="async" fetchpriority="high">
+
+        <div class="service__info reveal">
+          <h1 class="section-title service__title">Стилизация съёмок</h1>
+          <p class="service__slogan">Сильный кадр начинается с идеи. А детали превращают её в историю.</p>
+
+          <div class="service__text">
+            <p>Работа начинается с обсуждения концепции, настроения, референсов и задач съёмки.</p>
+            <p>На основе идеи я разрабатываю стилистическое решение: подбираю одежду, обувь, аксессуары и детали, которые формируют нужный визуальный образ.</p>
+            <p>Мне важно не просто красиво одеть модель, а создать цельную историю, в которой каждый элемент работает на общую концепцию.</p>
+            <p>Во время съёмки я контролирую образы в кадре, посадку вещей и детали, от которых зависит финальный результат.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Результат -->
+      <section class="result reveal">
+        <h2 class="section-title result__title">Результат</h2>
+        <p class="result__text">Визуально сильные образы, которые раскрывают идею съёмки и помогают получить запоминающиеся кадры.</p>
+      </section>
+
+      <!-- Стоимость и кнопка -->
+      <section class="price reveal">
+        <h2 class="price__label">Стоимость</h2>
+        <p class="price__value">Рассчитывается индивидуально в зависимости от количества образов и задач проекта.</p>
+        <a href="https://t.me/roksi012" class="btn btn--large" target="_blank" rel="noopener">Обсудить съёмку</a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Плавающая кнопка записи: видна только на телефоне, когда баннер уже прокручен -->
+  <a href="https://t.me/roksi012" class="floating-cta" target="_blank" rel="noopener">Записаться в Telegram</a>
+
+  <!-- ===== ПОДВАЛ ===== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <!-- Слева: монограмма и имя -->
+      <div class="footer__brand">
+        <p class="footer__monogram">А.Ш.</p>
+        <p class="footer__name">Анастасия Шиян</p>
+        <p class="footer__role">стилист</p>
+      </div>
+
+      <!-- Справа: контакты -->
+      <div class="footer__contacts">
+        <p class="footer__title">Контакты</p>
+        <ul class="footer__list">
+          <li>
+            <a href="https://t.me/roksi012" class="footer__link" target="_blank" rel="noopener">
+              <!-- Иконка: самолётик -->
+              <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 2 11 13"></path>
+                <path d="M22 2 15 22l-4-9-9-4z"></path>
+              </svg>
+              Telegram: @roksi012
+            </a>
+          </li>
+          <li>
+            <a href="mailto:Nasikkroko@mail.ru" class="footer__link">
+              <!-- Иконка: конверт -->
+              <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 6-10 7L2 6"></path>
+              </svg>
+              Почта: Nasikkroko@mail.ru
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Линия и копирайт -->
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 Анастасия Шиян</p>
+    </div>
+  </footer>
+
+</body>
+</html>

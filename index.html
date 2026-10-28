@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Анастасия Шиян — стилист</title>
+  <meta name="description" content="Анастасия Шиян — стилист: шоппинг-сопровождение, разбор гардероба и стилизация съёмок, чтобы стиль стал продолжением вашей личности.">
+  <meta name="theme-color" content="#FAF8F5">
+
+  <!-- Иконка вкладки: тёмный круг с белой звёздочкой -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232B2B2B'/%3E%3Cpath d='M32 14C33.6 26 38 30.4 50 32C38 33.6 33.6 38 32 50C30.4 38 26 33.6 14 32C26 30.4 30.4 26 32 14Z' fill='%23FFFFFF'/%3E%3C/svg%3E">
+
+  <!-- Карточка ссылки при отправке в Telegram, WhatsApp и соцсети -->
+  <!-- Когда сайт будет на хостинге, в og:image лучше указать полный адрес: https://ваш-сайт/images/hero.jpg -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Анастасия Шиян — стилист">
+  <meta property="og:description" content="Анастасия Шиян — стилист: шоппинг-сопровождение, разбор гардероба и стилизация съёмок, чтобы стиль стал продолжением вашей личности.">
+  <meta property="og:image" content="images/hero.jpg">
+
+  <!-- Главное фото загружаем сразу, без ожидания CSS -->
+  <link rel="preload" as="image" href="images/hero.jpg">
+
+  <!-- Шрифты Google Fonts: Montserrat и Cormorant Garamond (обычный и курсив) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Наши стили -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Наш скрипт: defer — выполнится после загрузки HTML и не тормозит отрисовку -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Фон сайта: мягкие размытые пятна позади всего контента -->
+  <div class="page-bg" aria-hidden="true">
+    <span class="page-bg__blob page-bg__blob--1"></span>
+    <span class="page-bg__blob page-bg__blob--2"></span>
+    <span class="page-bg__blob page-bg__blob--3"></span>
+  </div>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header">
+    <div class="header__inner">
+      <!-- Левые ссылки -->
+      <nav class="header__nav header__nav--left">
+        <a href="index.html#services" class="header__link">Услуги</a>
+        <a href="index.html#about" class="header__link">Обо мне</a>
+      </nav>
+
+      <!-- Логотип по центру -->
+      <a href="index.html" class="logo">stylist</a>
+
+      <!-- Правые ссылки -->
+      <nav class="header__nav header__nav--right">
+        <a href="index.html#portfolio" class="header__link">Портфолио</a>
+        <a href="https://t.me/roksi012" class="header__link" target="_blank" rel="noopener">Связаться</a>
+      </nav>
+
+      <!-- Кнопка-бургер (видна только на телефоне) -->
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Мобильное меню на весь экран -->
+  <nav class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__links">
+      <a href="index.html#services" class="mobile-menu__link">Услуги</a>
+      <a href="index.html#about" class="mobile-menu__link">Обо мне</a>
+      <a href="index.html#portfolio" class="mobile-menu__link">Портфолио</a>
+      <a href="https://t.me/roksi012" class="mobile-menu__link" target="_blank" rel="noopener">Связаться</a>
+    </div>
+
+    <!-- Контакты внизу меню -->
+    <div class="mobile-menu__contacts">
+      <a href="https://t.me/roksi012" target="_blank" rel="noopener">@roksi012</a>
+      <a href="mailto:Nasikkroko@mail.ru">Nasikkroko@mail.ru</a>
+    </div>
+  </nav>
+
+  <!-- ===== ОСНОВНОЕ СОДЕРЖИМОЕ ===== -->
+  <main>
+
+    <!-- ===== РАЗДЕЛ 1: ГЛАВНЫЙ ЭКРАН ===== -->
+    <section class="hero" id="hero">
+      <!-- Фото баннера: обычная картинка, обрезается по размеру блока -->
+      <img src="images/hero.jpg" alt="Стилист Анастасия Шиян" class="hero__img" fetchpriority="high" decoding="async">
+
+      <!-- Текст поверх фото -->
+      <div class="hero__content reveal">
+        <h1 class="hero__title">stylist</h1>
+        <p class="hero__subtitle">Анастасия Шиян</p>
+      </div>
+
+      <!-- Вращающийся круглый значок, ведёт к услугам -->
+      <a href="#services" class="hero__badge" aria-label="Перейти к услугам">
+        <svg class="hero__badge-ring" viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <!-- Круг, по которому идёт текст -->
+            <path id="badge-circle" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"></path>
+          </defs>
+          <text class="hero__badge-text">
+            <textPath href="#badge-circle" textLength="486" lengthAdjust="spacing">stylist • Анастасия Шиян • </textPath>
+          </text>
+        </svg>
+        <span class="hero__badge-star" aria-hidden="true">✦</span>
+      </a>
+    </section>
+
+    <!-- ===== РАЗДЕЛ 2: ОБО МНЕ ===== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <img src="images/portfolio-13.jpg" alt="Анастасия Шиян, стилист" class="about__photo reveal" loading="lazy" decoding="async">
+
+        <div class="about__text reveal">
+          <h2 class="section-title about__title">About me</h2>
+          <p class="about__lead">Стиль — это не попытка стать кем-то другим. Это способ ярче показать, кто ты.</p>
+          <hr class="about__line">
+          <p class="about__desc">В своей работе я не стремлюсь подогнать человека под модные стандарты. Мне важно раскрыть его индивидуальность, подчеркнуть сильные стороны и создать стиль, который будет продолжением личности.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== РАЗДЕЛ 3: УСЛУГИ ===== -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="big-title reveal">services</h2>
+
+        <div class="services">
+          <!-- Карточка 1 (card__body наклоняется в 3D) -->
+          <a href="shopping.html" class="card reveal">
+            <div class="card__body">
+              <div class="card__photo">
+                <img src="images/shopping.jpg" alt="Шоппинг-сопровождение" loading="lazy" decoding="async">
+              </div>
+              <h3 class="card__title">Шоппинг-сопровождение</h3>
+              <p class="card__price">20 000 ₽</p>
+              <span class="card__more">Подробнее →</span>
+            </div>
+          </a>
+
+          <!-- Карточка 2 -->
+          <a href="razbor.html" class="card reveal">
+            <div class="card__body">
+              <div class="card__photo">
+                <img src="images/razbor.jpg" alt="Разбор гардероба" loading="lazy" decoding="async">
+              </div>
+              <h3 class="card__title">Разбор гардероба</h3>
+              <p class="card__price">20 000 ₽</p>
+              <span class="card__more">Подробнее →</span>
+            </div>
+          </a>
+
+          <!-- Карточка 3 -->
+          <a href="styling.html" class="card reveal">
+            <div class="card__body">
+              <div class="card__photo">
+                <img src="images/portfolio-1.jpg" alt="Стилизация съёмок" loading="lazy" decoding="async">
+              </div>
+              <h3 class="card__title">Стилизация съёмок</h3>
+              <p class="card__price">Индивидуально</p>
+              <span class="card__more">Подробнее →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== РАЗДЕЛ 4: ПОРТФОЛИО ===== -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <h2 class="big-title reveal">portfolio</h2>
+
+        <!-- Кнопки-стрелки: рядом друг с другом, справа -->
+        <div class="gallery__controls reveal">
+          <button class="gallery__btn gallery__btn--prev" type="button" aria-label="Предыдущее фото">←</button>
+          <button class="gallery__btn gallery__btn--next" type="button" aria-label="Следующее фото">→</button>
+        </div>
+
+        <!-- Лента фото: внутри контейнера, на компьютере ровно 3 фото -->
+        <div class="gallery reveal">
+          <img src="images/portfolio-2.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+          <img src="images/portfolio-3.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+          <img src="images/portfolio-4.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+          <img src="images/portfolio-5.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+          <img src="images/portfolio-6.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+          <img src="images/portfolio-7.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+          <img src="images/portfolio-8.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+          <img src="images/portfolio-9.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+          <img src="images/portfolio-10.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+          <img src="images/portfolio-11.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+          <img src="images/portfolio-12.jpg" alt="Работа стилиста Анастасии Шиян" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Плавающая кнопка записи: видна только на телефоне, когда баннер уже прокручен -->
+  <a href="https://t.me/roksi012" class="floating-cta" target="_blank" rel="noopener">Записаться в Telegram</a>
+
+  <!-- ===== ПОДВАЛ ===== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <!-- Слева: монограмма и имя -->
+      <div class="footer__brand">
+        <p class="footer__monogram">А.Ш.</p>
+        <p class="footer__name">Анастасия Шиян</p>
+        <p class="footer__role">стилист</p>
+      </div>
+
+      <!-- Справа: контакты -->
+      <div class="footer__contacts">
+        <p class="footer__title">Контакты</p>
+        <ul class="footer__list">
+          <li>
+            <a href="https://t.me/roksi012" class="footer__link" target="_blank" rel="noopener">
+              <!-- Иконка: самолётик -->
+              <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 2 11 13"></path>
+                <path d="M22 2 15 22l-4-9-9-4z"></path>
+              </svg>
+              Telegram: @roksi012
+            </a>
+          </li>
+          <li>
+            <a href="mailto:Nasikkroko@mail.ru" class="footer__link">
+              <!-- Иконка: конверт -->
+              <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 6-10 7L2 6"></path>
+              </svg>
+              Почта: Nasikkroko@mail.ru
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Линия и копирайт -->
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 Анастасия Шиян</p>
+    </div>
+  </footer>
+
+  <!-- Просмотр фото портфолио на весь экран (открывается из script.js) -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Закрыть">×</button>
+    <button class="lightbox__btn lightbox__btn--prev" type="button" aria-label="Предыдущее фото">←</button>
+    <img class="lightbox__img" alt="Работа стилиста Анастасии Шиян" decoding="async">
+    <button class="lightbox__btn lightbox__btn--next" type="button" aria-label="Следующее фото">→</button>
+    <p class="lightbox__counter"></p>
+  </div>
+
+</body>
+</html>
